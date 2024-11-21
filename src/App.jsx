@@ -82,7 +82,7 @@ function App() {
 
   return (
     <main>
-      <div className="phone-screen">
+      <div className={`phone-screen ${availableRooms.length === 0 ? 'no-rooms' : ''}`}>
         <div className="column">
 
           <div className="phone-tab">
