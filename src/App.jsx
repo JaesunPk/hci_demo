@@ -5,6 +5,15 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./App.css";
 import Card from "./components/card";
 import Cart from "./components/cart";
+import ZachChevronRooms from "./assets/ZachChevronRooms.jpg";
+import HuddleRoom from "./assets/huddle_room.jpg";
+import ZachrySeminar from "./assets/zachry-seminar.jpg";
+import GroupStudyRoom from "./assets/group-study-room.jpg";
+import TamuLarge2 from "./assets/tamu-large2.jpg";
+import StudyRoom from "./assets/studyroom.jpg";
+import MediumRoom from "./assets/medium-room.jpg";
+import Images from "./assets/images.jpg";
+import HonorsLounge from "./assets/honors-lounge.jpg";
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -80,7 +89,7 @@ function App() {
       {
         title: "ZACH 200A",
         description: "Large room for conferences.",
-        imageUrl: "src/assets/ZachChevronRooms.jpg",
+        imageUrl: ZachChevronRooms,
         buttonText: "Add",
         extraInfo:
           "Holds up to 100 people. Includes projector, air conditioning, and WiFi.",
@@ -88,7 +97,7 @@ function App() {
       {
         title: "ZACH 200B",
         description: "Small private meeting room.",
-        imageUrl: "src/assets/huddle_room.jpg",
+        imageUrl: HuddleRoom,
         buttonText: "Add",
         extraInfo:
           "Holds up to 10 people. Includes a whiteboard and comfortable seating.",
@@ -96,7 +105,7 @@ function App() {
       {
         title: "ZACH 201A",
         description: "Medium-sized seminar room.",
-        imageUrl: "src/assets/zachry-seminar.jpg",
+        imageUrl: ZachrySeminar,
         buttonText: "Add",
         extraInfo:
           "Holds up to 50 people. Includes audio system and modern seating.",
@@ -104,7 +113,7 @@ function App() {
       {
         title: "ZACH 332",
         description: "Cozy meeting space.",
-        imageUrl: "src/assets/group-study-room.jpg",
+        imageUrl: GroupStudyRoom,
         buttonText: "Add",
         extraInfo: "Holds up to 8 people. Includes a smart TV and free coffee.",
       },
@@ -113,7 +122,7 @@ function App() {
       {
         title: "ZACH 300A",
         description: "Spacious room with great lighting.",
-        imageUrl: "src/assets/tamu-large2.jpg",
+        imageUrl: TamuLarge2,
         buttonText: "Add",
         extraInfo:
           "Holds up to 100 people. Includes modern amenities and a sound system.",
@@ -121,7 +130,7 @@ function App() {
       {
         title: "ZACH 300B",
         description: "Quiet room for focused work.",
-        imageUrl: "src/assets/studyroom.jpg",
+        imageUrl: StudyRoom,
         buttonText: "Add",
         extraInfo:
           "Holds up to 20 people. Includes high-speed WiFi and comfortable chairs.",
@@ -129,7 +138,7 @@ function App() {
       {
         title: "ZACH 301",
         description: "Classroom-style space.",
-        imageUrl: "src/assets/medium-room.jpg",
+        imageUrl: MediumRoom,
         buttonText: "Add",
         extraInfo:
           "Holds up to 30 people. Includes desks and a large projector.",
@@ -137,7 +146,7 @@ function App() {
       {
         title: "ZACH 302",
         description: "Executive meeting room.",
-        imageUrl: "src/assets/images.jpg",
+        imageUrl: Images,
         buttonText: "Add",
         extraInfo:
           "Holds up to 15 people. Includes video conferencing equipment.",
@@ -145,7 +154,7 @@ function App() {
       {
         title: "ZACH 303",
         description: "Open collaborative space.",
-        imageUrl: "src/assets/honors-lounge.jpg",
+        imageUrl: HonorsLounge,
         buttonText: "Add",
         extraInfo:
           "Holds up to 25 people. Includes flexible seating and writable walls.",
@@ -155,7 +164,7 @@ function App() {
       {
         title: "ZACH 400A",
         description: "Large hall for evening events.",
-        imageUrl: "src/assets/tamu-large2.jpg",
+        imageUrl: TamuLarge2,
         buttonText: "Add",
         extraInfo:
           "Holds up to 150 people. Includes stage, lighting, and sound equipment.",
@@ -163,14 +172,14 @@ function App() {
       {
         title: "ZACH 400B",
         description: "Medium-sized room for classes.",
-        imageUrl: "src/assets/zachry-seminar.jpg",
+        imageUrl: ZachrySeminar,
         buttonText: "Add",
         extraInfo: "Holds up to 30 people. Includes projector and whiteboard.",
       },
       {
         title: "ZACH 401",
         description: "Cozy reading space.",
-        imageUrl: "src/assets/group-study-room.jpg",
+        imageUrl: GroupStudyRoom,
         buttonText: "Add",
         extraInfo: "Holds up to 5 people. Includes bean bags and a bookshelf.",
       },
