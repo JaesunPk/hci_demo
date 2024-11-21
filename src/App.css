@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /* border: 1px solid red; */
+}
+
+html, body, #root {
+  height: 100%; 
+  margin: 0; 
+  padding: 0; 
+}
+
+main {
+  overflow-y: auto; /* Allow entire screen to scroll */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the top */
+  height: auto;
+  min-height: 100vh; /* Ensure it at least covers the viewport */
+  background-color: #242424;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-tab {
+  width: 100%;
+  height: 80px;
+  background-color: #540909;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.phone-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  min-height: 100%; /* Dynamically grows with content */
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+#cart-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #540909;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5rem; 
+  border-radius: 5px; 
+  transition: 0.3s;
+}
+
+#cart-icon:hover {
+  opacity: 0.8;
+}
+
+.picker-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 15px;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.date-picker {
+  width: 120%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.date-picker:focus {
+  border-color: #540909;
+}
+
+.time_row {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.room-list {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; 
+}
+
+.room-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.room-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+.room-list::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
+}
