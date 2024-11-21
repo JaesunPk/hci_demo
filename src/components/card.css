@@ -43,7 +43,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
   }
   
   .card-button:hover {
@@ -54,7 +54,7 @@
 .modal-overlay {
     position: fixed;
     top: 0;
-    left: 20;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
@@ -63,29 +63,30 @@
     align-items: center;
     z-index: 1000;
     transition: opacity 0.3s;
-  }
-  
-  /* Modal Content */
-  .modal-content {
+}
+
+/* Modal Content */
+.modal-content {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
     max-width: 380px;
+    margin-right: 15px;
     width: 100%;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-  }
-  
-  .modal-image {
+}
+
+.modal-image {
     width: 100%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
-  }
-  
-  .modal-close-button {
+}
+
+.modal-close-button {
     padding: 10px 15px;
     font-size: 1rem;
     color: white;
@@ -94,17 +95,17 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
 
-  .modal-content p, .modal-content h2 {
+.modal-content p, .modal-content h2 {
     color: black;
     font-size: 1rem;
     margin-bottom: 15px;
-  }
-  
-  .modal-close-button:hover {
+}
+
+.modal-close-button:hover {
     background-color: #420707;
-  }
+}
   
 .row {
     justify-content: space-evenly;

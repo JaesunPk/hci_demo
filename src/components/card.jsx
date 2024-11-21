@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './card.css';
+import './Card.css';
 
 function Card({ title, description, imageUrl, buttonText, onButtonClick, extraInfo }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
