@@ -17,18 +17,41 @@ function App() {
   const toggleCart = () => setIsCartOpen(!isCartOpen);
 
   const addToCart = (room) => {
-    if (!cart.some((cartItem) => cartItem.title === room.title)) {
-      setCart((prevCart) => [...prevCart, room]); // Add room to cart if not already present
-      alert(`${room.title} added to cart!`);
+    const reservation = {
+      ...room,
+      date: selectedDate.toLocaleDateString(),
+      time: formatTime(room.time), 
+    };
+
+    //prevent duplication only if both title, date, and time match
+    if (
+      !cart.some(
+        (item) =>
+          item.title === room.title &&
+          item.date === reservation.date &&
+          item.time === reservation.time
+      )
+    ) {
+      setCart((prevCart) => [...prevCart, reservation]);
+      alert(`${room.title} for ${reservation.date} at ${reservation.time} added to cart!`);
     } else {
-      alert(`${room.title} is already in the cart.`);
+      alert(`${room.title} for ${reservation.date} at ${reservation.time} is already in the cart.`);
     }
   };
 
   const clearCart = () => setCart([]);
 
   const removeFromCart = (roomToRemove) => {
-    setCart(cart.filter((room) => room.title !== roomToRemove.title)); // Remove a specific item from the cart
+    setCart(
+      cart.filter(
+        (room) =>
+          !(
+            room.title === roomToRemove.title &&
+            room.date === roomToRemove.date &&
+            room.time === roomToRemove.time
+          )
+      )
+    );
   };
 
   const submitCart = () => {
@@ -36,11 +59,15 @@ function App() {
       alert("Your cart is empty. Please add items before submitting.");
       return;
     }
-    alert("Reservations submitted!");
-    setCart([]); // Clear the cart after submission
-    setIsCartOpen(false); // Close the cart modal
-  };
 
+    const reservationSummary = cart
+      .map((item) => `${item.title} on ${item.date} at ${item.time}`)
+      .join("\n");
+
+    alert(`Reservations submitted:\n${reservationSummary}`);
+    setCart([]); //clear cart after submission
+    setIsCartOpen(false); //close card modal
+  };
   //end of cart state
 
   // Hardcoded room availability based on selected time

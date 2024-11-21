@@ -16,6 +16,10 @@ function Cart({ cart, clearCart, removeFromCart, toggleCart, submitCart }) {
                 <div className="cart-item-info">
                   <strong className="cart-item-title">{item.title}</strong>
                   <p className="cart-item-description">{item.description}</p>
+                  <p className="cart-item-datetime">
+                    <strong>Date:</strong> {item.date} <br />
+                    <strong>Time:</strong> {item.time}
+                  </p>
                 </div>
                 <button
                   className="remove-button"

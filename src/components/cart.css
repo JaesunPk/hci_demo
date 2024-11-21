@@ -75,6 +75,13 @@
     color: #555 !important;
     margin: 0;
   }
+
+  .cart-item-datetime {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+    font-style: italic;
+}
   
   .cart-empty-message {
     text-align: center;
@@ -121,5 +128,29 @@
   .submit-cart-button:hover {
     background-color: #420707;
     transform: scale(1.02);
+  }
+
+  .cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px; 
+    overflow-y: auto; 
+    scrollbar-width: thin; 
+    scrollbar-color: #ccc transparent; 
+
+  }
+
+  .cart-list::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .cart-list::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 4px;
+  }
+
+  .cart-list::-webkit-scrollbar-track {
+    background: transparent;
   }
   
