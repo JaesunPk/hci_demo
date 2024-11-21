@@ -266,6 +266,9 @@ function App() {
                 showTimeSelect
                 dateFormat="MMMM d, yyyy h:mm aa"
                 className="date-picker"
+                timeInputLabel="Select Time"
+                withPortal
+                popperPlacement="bottom"
               />
             </div>
           </div>
