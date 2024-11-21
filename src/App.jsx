@@ -3,7 +3,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./App.css";
-import Card from "./components/Card";
+import Card from "./components/card";
 import Cart from "./components/cart";
 
 function App() {
