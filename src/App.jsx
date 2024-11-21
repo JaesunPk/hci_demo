@@ -4,11 +4,44 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./App.css";
 import Card from "./components/Card";
+import Cart from "./components/cart";
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [availableRooms, setAvailableRooms] = useState([]);
   const [animationKey, setAnimationKey] = useState(0);
+
+  //cart state
+  const[cart, setCart] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const toggleCart = () => setIsCartOpen(!isCartOpen);
+
+  const addToCart = (room) => {
+    if (!cart.some((cartItem) => cartItem.title === room.title)) {
+      setCart((prevCart) => [...prevCart, room]); // Add room to cart if not already present
+      alert(`${room.title} added to cart!`);
+    } else {
+      alert(`${room.title} is already in the cart.`);
+    }
+  };
+
+  const clearCart = () => setCart([]);
+
+  const removeFromCart = (roomToRemove) => {
+    setCart(cart.filter((room) => room.title !== roomToRemove.title)); // Remove a specific item from the cart
+  };
+
+  const submitCart = () => {
+    if (cart.length === 0) {
+      alert("Your cart is empty. Please add items before submitting.");
+      return;
+    }
+    alert("Reservations submitted!");
+    setCart([]); // Clear the cart after submission
+    setIsCartOpen(false); // Close the cart modal
+  };
+
+  //end of cart state
 
   // Hardcoded room availability based on selected time
   const roomAvailability = {
@@ -168,8 +201,23 @@ function App() {
 
           <div className="phone-tab">
             <h2>Zachry Reservation Room</h2>
-            <button id="cart-icon">
+            {/* cart icon button */}
+            <button id="cart-icon" onClick={toggleCart}>
               <FaShoppingCart style={{ color: "white", fontSize: "1.5rem" }} />
+              {cart.length > 0 && (
+                <span
+                  style={{
+                    backgroundColor: "red",
+                    color: "white",
+                    borderRadius: "50%",
+                    padding: "0.2rem 0.4rem",
+                    marginLeft: "0.5rem",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  {cart.length}
+                </span>
+              )}
             </button>
           </div>
 
@@ -202,7 +250,8 @@ function App() {
                     description={room.description}
                     imageUrl={room.imageUrl}
                     buttonText={room.buttonText}
-                    onButtonClick={() => alert(`${room.title} added to cart!`)}
+                    onButtonClick={() => addToCart(room)}
+                    //onButtonClick={() => alert(`${room.title} added to cart!`)}
                     extraInfo={room.extraInfo}
                   />
                 </div>
@@ -213,6 +262,22 @@ function App() {
               </p>
             )}
           </div>
+
+
+          {/* Cart */}
+          {isCartOpen && (
+            <div className="modal-overlay">
+              <div className="modal-content">
+                <Cart
+                  cart={cart}
+                  clearCart={clearCart}
+                  removeFromCart={removeFromCart}
+                  toggleCart={toggleCart}
+                  submitCart={submitCart}
+                />
+              </div>
+            </div>
+          )}
 
         </div>
       </div>

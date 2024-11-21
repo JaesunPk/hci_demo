@@ -1,0 +1,125 @@
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .cart-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+  
+  .cart-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .cart-close-button:hover {
+    color: #000;
+  }
+  
+  .cart-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    gap: 10px;
+  }
+  
+  .cart-item-info {
+    flex-grow: 1;
+  }
+  
+  .cart-item-title {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .cart-item-description {
+    font-size: 0.9rem;
+    color: #555 !important;
+    margin: 0;
+  }
+  
+  .cart-empty-message {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .remove-button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .remove-button:hover {
+    background-color: #a52734;
+    transform: scale(1.05);
+  }
+  
+  .cart-actions-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .clear-cart-button,
+  .submit-cart-button {
+    background-color: #540909;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .clear-cart-button:hover,
+  .submit-cart-button:hover {
+    background-color: #420707;
+    transform: scale(1.02);
+  }
+  
