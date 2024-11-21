@@ -37,7 +37,7 @@ function Card({ title, description, imageUrl, buttonText, onButtonClick, extraIn
                 <button className="modal-close-button" onClick={closeModal}>
                 Close
                 </button>
-                <button className="card-button">
+                <button className="card-button" onClick={(e) => { e.stopPropagation(); onButtonClick(); closeModal(); }}>
                     {buttonText}
                 </button>
             </div>

@@ -216,9 +216,18 @@ function App() {
   };
 
   // Helper function to format the time for display
+  // Helper function to format the time range for display
   const formatTime = (date) => {
     if (!date) return "Unknown Time"; // Fallback for undefined date
-    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true });
+
+    const start = new Date(date);
+    const end = new Date(date);
+    end.setMinutes(end.getMinutes() + 30); // Add 30 minutes to get the end time
+
+    const startTime = start.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true });
+    const endTime = end.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true });
+
+    return `${startTime} - ${endTime}`;
   };
 
   return (

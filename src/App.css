@@ -10,6 +10,10 @@ html, body, #root {
   padding: 0; 
 }
 
+h2 {
+  font-size: 1.2rem;
+}
+
 main {
   overflow-y: auto;
   display: flex;
