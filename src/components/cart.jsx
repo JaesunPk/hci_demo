@@ -31,11 +31,11 @@ function Cart({ cart, clearCart, removeFromCart, toggleCart, submitCart }) {
         )}
         {cart.length > 0 && (
           <div className="cart-actions-column">
-            <button className="clear-cart-button" onClick={clearCart}>
-              Clear Cart
-            </button>
             <button className="submit-cart-button" onClick={submitCart}>
               Submit
+            </button>
+            <button className="clear-cart-button" onClick={clearCart}>
+              Clear Cart
             </button>
           </div>
         )}
