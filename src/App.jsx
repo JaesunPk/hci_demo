@@ -266,7 +266,11 @@ function App() {
                 showTimeSelect
                 dateFormat="MMMM d, yyyy h:mm aa"
                 className="date-picker"
-                timeInputLabel="Select Time"
+                customInput={
+                  <button type="button" className="custom-datepicker-btn">
+                    {selectedDate.toLocaleString()}
+                  </button>
+                }
                 withPortal
                 popperPlacement="bottom"
               />

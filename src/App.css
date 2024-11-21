@@ -161,3 +161,21 @@ h3 {
 .card-animation {
   animation: slideInFromRight 0.4s ease-out;
 }
+
+.react-datepicker {
+  max-width: 100%;
+}
+
+.react-datepicker__portal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.date-picker,
+.time-picker {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
